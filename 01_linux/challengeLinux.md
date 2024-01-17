@@ -63,26 +63,38 @@ dieser Ordner ist bereits im geteilten GitHub Repository angelegt
 ##### Aufgabe 4: Pipelines und Befehlskombinationen
 
     # Erstelle eine Textdatei "zahlen.txt" und fügen Sie einige Zahlen (eine pro Zeile) ein.
-
+    `for _ in $(seq 1 100); do echo $((RANDOM % 100 + 1)) >> "zahlen.txt"; done`
 
     # Filter die Datei "zahlen.txt" nach Zeilen, die größer als 50 sind.
-
+    `awk '$1 <= 50' zahlen.txt > gefilterte_zahlen.txt`
 
     # Sortiere die gefilterten Zahlen in aufsteigender Reihenfolge.
+    `sort -n gefilterte_zahlen.txt > sortierte_zahlen.txt`
 
     # Berechne die Summe aller Zahlen in der sortierten Liste.
+    `awk '{ sum += $1 } END { print sum }' sortierte_zahlen.txt`
 
 ##### Aufgabe 5: Umgebungsvariablen und Befehlsparameter
 
     # Erstelle eine Umgebungsvariable namens "MEIN_NAME" und setzen Sie sie auf Ihren Namen.
-
+    `export MEIN_NAME="Marc"`
 
     # Schreibe ein Shell-Skript mit dem Namen "begruessung.sh",
     # das "Hallo, <DEIN Name>!" ausgibt, wobei <DEIN NAME> durch den Wert
     # der gesetzten Umgebungsvariable ersetzt wird.
+    `touch begruessung.sh`
+    `
+        #!/bin/bash
+        echo "Halli $MEIN_NAME"
+    `
 
     # Gebe dem Skript die Möglichkeit, einen Begrüßungstext
     # als Parameter zu akzeptieren, und passen Sie die Ausgabe entsprechend an. - dokumentiere auch deine Eingabe
+    `
+        #!/bin/bash
+        BEGRUESSUNGSTEXT=${1:-"Hallo"}
+        echo "$BEGRUESSUNGSTEXT $MEIN_NAME"
+    `
 
 ##### Aufgabe 6: fortgeschrittene Skripte (bitte jeweils als eigene Datei speichern und in separatem Ordner ablegen)
 
