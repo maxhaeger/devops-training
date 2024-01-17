@@ -9,42 +9,56 @@ dieser Ordner ist bereits im geteilten GitHub Repository angelegt
 ##### Aufgabe 1: Grundlegende Befehle
 
     # Navigieren Sie zum Home-Verzeichnis.
+    `cd ~`
 
 
     # Erstellen Sie ein neues Verzeichnis namens "CLI-Übung".
+    `mkdir name`
 
 
     # Wechseln Sie in das neue Verzeichnis.
+    `cd name`
 
 
     # Erstellen Sie eine leere Textdatei mit dem Namen "notizen.txt".
+    `touch notizen.txt`
 
 
     # Listen Sie den Inhalt des Verzeichnisses auf, um sicherzustellen, dass die Datei erstellt wurde.
+    `ls`
 
 
     # Hängen Sie den Text "Erste Notiz" an die Datei "notizen.txt".
+    `echo "Erste Notiz" >> notizen.txt`
 
 
     # Zeigen Sie den Inhalt der Datei "notizen.txt" an.
+    `cat notizen.txt`
 
 ##### Aufgabe 2: Datei- und Verzeichnisumbenennung
 
     # Benennen Sie die Datei "notizen.txt" in "meine_notizen.txt" um.
+    `mv notizen.txt meine_notizen.txt`
 
     # Erstellen Sie ein neues Verzeichnis namens "Backup".
+    `mkdir Backup`
 
     # Verschieben Sie die Datei "meine_notizen.txt" in das Verzeichnis "Backup".
+    `mv meine_notizen.txt Backup`
 
 ##### Aufgabe 3: Dateisuche und Filterung
 
     # Wechseln zurück zum Home-Verzeichnis.
+    `cd ~`
 
     # Erstellen mehrere Textdateien mit unterschiedlichen Namen und dem Text-Inhalt "wichtig"  mitfilfe einer for-Schleife
+    `for i in `seq 1 10`; do echo "wichtig" > "datei_$i.txt"; done`
 
     # Suchen nach allen Dateien im Lösungs-Verzeichnis, die das Wort "wichtig" enthalten.
+    `grep -rl "wichtig" ~/`
 
     # Lösche alle gefundenen Dateien.
+    `grep -rl "wichtig" ~/`
 
 ##### Aufgabe 4: Pipelines und Befehlskombinationen
 
