@@ -123,7 +123,6 @@ dieser Ordner ist bereits im geteilten GitHub Repository angelegt
     # der Geschichte beeinflussen - nutze dazu lediglich Variablen, echo, read, case, if & else Befehle und Abfragen
     # Tipp: Entscheidungen/Wahrscheinlichkeiten können über eine modulo (%) Funktion abgefragt werden
 
-
     # Systemüberwachung: Entwickle ein Skript, das wichtige
     # Systeminformationen wie CPU-Auslastung, Speicherbelegung und
     # angeschlossene Hardware anzeigt. - halte es einfach und so kurz wie möglich
