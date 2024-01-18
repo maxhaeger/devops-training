@@ -1,17 +1,9 @@
-# versuche nach Möglichkeit immer ein Version Pinning durchzuführen anstelle das :latest Image zu nehmen, hier würde ich openjdk:11 vorschlagen
-FROM openjdk:latest as builder
+FROM openjdk:11 as builder
 WORKDIR /app
 COPY ./hello.java .
-# das hier entfällt, siehe weiter unten
-COPY ./Manifest.txt . 
 RUN javac hello.java
-# den Schritt würde ich weglassen der Einfachheit halber
-RUN jar cvfm app.jar Manifest.txt *.class 
 
-FROM openjdk:latest
+FROM openjdk:11
 WORKDIR /app
-
-# hier würde ich gezielt die Datei kopieren anstelle des komlpetten Directories
-COPY --from=builder /app .  
- # diese Befehl gemäß des wegfallenden jars entsprechend anpassen
-CMD ["java", "-jar", "app.jar"]
+COPY --from=builder /app/HelloWorld.class .  
+CMD ["java", "HelloWorld"]
