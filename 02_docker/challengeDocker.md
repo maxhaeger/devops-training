@@ -78,6 +78,10 @@ achte darauf, nur die benötigten Dateien und Abhängigkeiten einzufügen.
 Vergleiche die Größe des finalen Images mit der eines 
 herkömmlichen Builds, kopiere das Ergebnis hier rein:
 
+| Image                | Size      |
+|----------------------|-----------|
+| unoptimized-go-build | 9.17 MB   |
+| optimized-go-build   | 248.73 MB |
 
 ### 6. Einfache Webseite mit Nginx:
 Erstelle ein Multi-Stage Dockerfile für eine einfache HTML-Webseite.
