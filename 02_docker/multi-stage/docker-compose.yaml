@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  hello-go:
+    build: ./task_01/
+
+  hello-py:
+    build: ./task_02/
+
+  hello-js:
+    build: ./task_03/
+    ports:
+      - 3000:3000
+  
+  hello-java:
+    build: ./task_04/
+
+  nginx:
+    build: ./task_06/
+    ports:
+      - 8080:80
