@@ -45,52 +45,52 @@ verwenden sollte im Gegenzug zu normalen Builds.
 
 
 
-### Einfaches Multi-Stage Dockerfile:
+### 1. Einfaches Multi-Stage Dockerfile:
 Erstelle ein einfaches Dockerfile für eine beliebige Anwendung 
 (z. B. ein "Hello World" Programm).
 Verwende zwei Stufen: Eine für den Build-Prozess und eine für 
 die Ausführung des Programms.
 
 
-### Python-Anwendung:
+### 2. Python-Anwendung:
 Erstelle ein Dockerfile für eine einfache Python-Anwendung, 
 die eine Datei ausdruckt. Nutze Multi-Stage Builds, um das 
 Python-Image zu optimieren.
 
 
-### Node.js-App mit Abhängigkeiten:
+### 3. Node.js-App mit Abhängigkeiten:
 Erstelle ein Dockerfile für eine Node.js-Anwendung 
 (z. B. ein einfaches Express.js-Serverprojekt).
 Nutze zwei Stufen, um die Abhängigkeiten zu 
 installieren und die Anwendung zu starten.
 
 
-### Java-Anwendung:
+### 4. Java-Anwendung:
 Versuche, ein Dockerfile für eine einfache Java-Anwendung 
 zu erstellen (z. B. ein "Hello World" in Java).
 Nutze Multi-Stage Builds, um den Build-Prozess effizienter 
 zu gestalten.
 
 
-### Buildgröße optimieren:
+### 5. Buildgröße optimieren:
 Erstelle ein Dockerfile für eine Anwendung deiner Wahl und 
 achte darauf, nur die benötigten Dateien und Abhängigkeiten einzufügen.
 Vergleiche die Größe des finalen Images mit der eines 
 herkömmlichen Builds, kopiere das Ergebnis hier rein:
 
 
-### Einfache Webseite mit Nginx:
+### 6. Einfache Webseite mit Nginx:
 Erstelle ein Multi-Stage Dockerfile für eine einfache HTML-Webseite.
 Verwende Nginx als Webserver in der finalen Stufe, um die Webseite 
 zu hosten.
 
 
-### Debugging und Ausgabe:
+### 7. Debugging und Ausgabe:
 Füge Debugging-Anweisungen (z. B. print-Anweisungen) in den Code 
 deiner Anwendung ein.
 Zeige, wie du die Ausgabe während des Build-Prozesses sichtbar 
 machen kannst.
 
-### Docker Compose nutzen:
+### 8. Docker Compose nutzen:
 Erstelle eine einfache Docker Compose-Datei, um deine Multi-Stage 
 Anwendung und ihre Abhängigkeiten zu starten.
