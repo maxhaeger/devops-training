@@ -1,6 +1,6 @@
 # Testaufgabe
 
-###Toolstack:
+## Toolstack:
 
 - Vagrant-CLI
 - Ansible-CLI
@@ -17,9 +17,9 @@
 - Nutze ansible für die Konfig der einzelnen Server
 - Am Ende sollte
 
-### Zusatzaufgabe (optional):
+## Zusatzaufgabe (optional):
 
-- Es gibt "Bonuspunkte" wenn du nach folgenden Best Practices vorgehst:
+Es gibt "Bonuspunkte" wenn du nach folgenden Best Practices vorgehst:
   - nutze eine ansible Control Node und führe die Konfiguration darüber aus anstelle deines lokalen Rechners
   - Nutze ansible Vault um Passwörter zu verschlüsseln
   - Nutze ansible Tags um die einzelnen Schritte zu gruppieren
@@ -28,13 +28,13 @@
 
 * ### Server 1:
 
-  - Webserver (nginx oder apache) mit kleiner Test Website und php Unterstützung,
+  Webserver (nginx oder apache) mit kleiner Test Website und php Unterstützung,
 
 * ### Server 2:
 
-  - Installation Docker, Deployment eines Wordpress oder ähnlichem als Docker-Container, der Wordpress-Container soll am Ende mit der Datanbank aus Server3 verbunden sein.
+  Installation Docker, Deployment eines Wordpress oder ähnlichem als Docker-Container, der Wordpress-Container soll am Ende mit der Datanbank aus Server3 verbunden sein.
 
 * ### Server 3:
-  - Datenbank (mysql, mariadb) für Server2 bereitstellen und mit Wordpress verbinden - per ansible aufgesetzt - Datenbank obitte nativ ohne Docker aufsetzen
+  Datenbank (mysql, mariadb) für Server2 bereitstellen und mit Wordpress verbinden - per ansible aufgesetzt - Datenbank obitte nativ ohne Docker aufsetzen
 
 ## Happy Coding! 🚀
