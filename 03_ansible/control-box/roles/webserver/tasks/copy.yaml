@@ -1,0 +1,14 @@
+- name: Copy Nginx configuration file
+  copy:
+    src: ../../../templates/nginx.conf
+    dest: /etc/nginx/nginx.conf
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart rginx
+
+- name: Erstelle einfache HTML-Testseite
+  template:
+    src: ../../../templates/index.html
+    dest: /usr/share/nginx/html/index.html
+  notify: restart nginx

@@ -1,17 +1,17 @@
 Vagrant.configure("2") do |config|
   servers = [
-    {
-      :hostname => "webserver",
-      :box => "bento/ubuntu-18.04",
-      :ip => "192.168.179.210",
-      :ssh_port => '2211'
-    },
-    {
-      :hostname => "dockerhost",
-      :box => "bento/ubuntu-18.04",
-      :ip => "192.168.179.211",
-      :ssh_port => '2212'
-    },
+    # {
+    #   :hostname => "webserver",
+    #   :box => "bento/ubuntu-18.04",
+    #   :ip => "192.168.179.210",
+    #   :ssh_port => '2211'
+    # },
+    # {
+    #   :hostname => "dockerhost",
+    #   :box => "bento/ubuntu-18.04",
+    #   :ip => "192.168.179.211",
+    #   :ssh_port => '2212'
+    # },
     {
       :hostname => "dbserver",
       :box => "bento/ubuntu-18.04",

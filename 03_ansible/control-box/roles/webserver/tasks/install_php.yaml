@@ -1,0 +1,12 @@
+- name: Installiere PHP und benötigte Bibliotheken
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - php-fpm
+    - php-mysql
+    - php-cli
+    - php-common
+    - php-json
+    - php-opcache
+    - php-readline
