@@ -1,8 +1,0 @@
-all:
-  hosts:
-    webserver:
-      ansible_host: 192.168.179.210
-    dockerhost:
-      ansible_host: 192.168.179.211
-    dbserver:
-      ansible_host: 192.168.179.213

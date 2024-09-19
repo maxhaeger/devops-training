@@ -1,40 +1,44 @@
-# Testaufgabe
+# Test Assignment
 
 ## Toolstack:
 
-- Vagrant-CLI
-- Ansible-CLI
-- Virtualbox
+- Vagrant CLI
+- Ansible CLI
+- VirtualBox
 - Linux (Ubuntu Server)
 - Docker
-- postgres oder mariaDB
-- myphpadmin
-- sftp
+- PostgreSQL or MariaDB
+- phpMyAdmin
+- SFTP
 
-- Erstelle via Vagrant 3 Virtuelle Maschinen (Ubuntu Server)
-- Die VM's sollen im "virtuellen" Netzwerk miteinander verbunden sein und sich gegenseitig erreichen können
-- Fertige zusätzlich eine Dokumentation deines Codes und der einzelnen Schritte an und präsentiere dein Ergebnis Beim Live Code-Review.
-- Nutze ansible für die Konfig der einzelnen Server
-- Am Ende sollte
+## Tasks:
 
-## Zusatzaufgabe (optional):
+- Create 3 virtual machines (Ubuntu Server) using Vagrant
+- The VMs should be connected in a "virtual" network and be able to reach each other
+- Additionally, create documentation of your code and individual steps, and present your result during the live code review
+- Use Ansible for the configuration of individual servers
+- At the end, the following should be set up:
 
-Es gibt "Bonuspunkte" wenn du nach folgenden Best Practices vorgehst:
-  - nutze eine ansible Control Node und führe die Konfiguration darüber aus anstelle deines lokalen Rechners
-  - Nutze ansible Vault um Passwörter zu verschlüsseln
-  - Nutze ansible Tags um die einzelnen Schritte zu gruppieren
-  - Nutze ansible Roles um die einzelnen Schritte zu gruppieren
-  - Nutze ansible Templates und Jinga2 um Konfigurationsdateien dynamisch zu erstellen
+### Server 1:
 
-* ### Server 1:
+Web server (Nginx or Apache) with a small test website and PHP support
 
-  Webserver (nginx oder apache) mit kleiner Test Website und php Unterstützung,
+### Server 2:
 
-* ### Server 2:
+Install Docker, deploy WordPress or similar as a Docker container. The WordPress container should be connected to the database from Server 3 at the end.
 
-  Installation Docker, Deployment eines Wordpress oder ähnlichem als Docker-Container, der Wordpress-Container soll am Ende mit der Datanbank aus Server3 verbunden sein.
+### Server 3:
 
-* ### Server 3:
-  Datenbank (mysql, mariadb) für Server2 bereitstellen und mit Wordpress verbinden - per ansible aufgesetzt - Datenbank obitte nativ ohne Docker aufsetzen
+Provide database (MySQL, MariaDB) for Server 2 and connect with WordPress - set up via Ansible. Please set up the database natively without Docker.
+
+## Additional Task (optional):
+
+There are "bonus points" if you follow these best practices:
+
+- Use an Ansible control node and execute the configuration through it instead of your local machine
+- Use Ansible Vault to encrypt passwords
+- Use Ansible tags to group individual steps
+- Use Ansible roles to group individual steps
+- Use Ansible templates and Jinja2 to dynamically create configuration files
 
 ## Happy Coding! 🚀

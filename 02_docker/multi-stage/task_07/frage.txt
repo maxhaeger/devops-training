@@ -1,1 +1,0 @@
-Wie soll ein Programm etwas printen, wenn es nur in eine Binary compiled wird?

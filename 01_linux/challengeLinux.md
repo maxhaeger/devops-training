@@ -1,128 +1,101 @@
-##### Aufgabenstellung:
+# Task Description:
 
-Löse die untenstehenden Aufgaben und dokumentiere deine Lösungswege in Form von Kommentaren innerhalb der jeweiligen Bash Datei.
-Es ist nicht zwingend nötig für jede Aufgabe/Skript eine eigene Datei zu erstellen, für die einfacheren Aufgaben reicht es aus, wenn die Lösungen
-unter die Fragestellung schreibst.
-Für die fortgeschrittenen Aufgaben solltest du jedoch eine eigene Datei erstellen und sie in einem separaten Lösungs-Ordner ablegen,
-dieser Ordner ist bereits im geteilten GitHub Repository angelegt
+Solve the tasks below and document your solution paths in the form of comments within the respective Bash file. It's not necessary to create a separate file for each task/script; for the simpler tasks, it's sufficient to write the solutions under the question. For the advanced tasks, however, you should create a separate file and place it in a separate solution folder, this folder is already created in the shared GitHub repository.
 
-##### Aufgabe 1: Grundlegende Befehle
+## Task 1: Basic Commands
 
-    # Navigieren Sie zum Home-Verzeichnis.
-    `cd ~`
+# Navigate to the home directory.
 
+# Create a new directory named "CLI-Exercise".
 
-    # Erstellen Sie ein neues Verzeichnis namens "CLI-Übung".
-    `mkdir name`
+# Change to the new directory.
 
+# Create an empty text file named "notes.txt".
 
-    # Wechseln Sie in das neue Verzeichnis.
-    `cd name`
+# List the contents of the directory to ensure the file was created.
 
+# Append the text "First Note" to the file "notes.txt".
 
-    # Erstellen Sie eine leere Textdatei mit dem Namen "notizen.txt".
-    `touch notizen.txt`
+# Display the contents of the file "notes.txt".
 
+## Task 2: File and Directory Renaming
 
-    # Listen Sie den Inhalt des Verzeichnisses auf, um sicherzustellen, dass die Datei erstellt wurde.
-    `ls`
+# Rename the file "notes.txt" to "my_notes.txt".
 
+# Create a new directory named "Backup".
 
-    # Hängen Sie den Text "Erste Notiz" an die Datei "notizen.txt".
-    `echo "Erste Notiz" >> notizen.txt`
+# Move the file "my_notes.txt" to the "Backup" directory.
 
+## Task 3: File Search and Filtering
 
-    # Zeigen Sie den Inhalt der Datei "notizen.txt" an.
-    `cat notizen.txt`
+# Change back to the home directory.
 
-##### Aufgabe 2: Datei- und Verzeichnisumbenennung
+# Create multiple text files with different names and the text content "important" using a for-loop.
 
-    # Benennen Sie die Datei "notizen.txt" in "meine_notizen.txt" um.
-    `mv notizen.txt meine_notizen.txt`
+# Search for all files in the solution directory that contain the word "important".
 
-    # Erstellen Sie ein neues Verzeichnis namens "Backup".
-    `mkdir Backup`
+# Delete all found files.
 
-    # Verschieben Sie die Datei "meine_notizen.txt" in das Verzeichnis "Backup".
-    `mv meine_notizen.txt Backup`
+## Task 4: Pipelines and Command Combinations
 
-##### Aufgabe 3: Dateisuche und Filterung
+# Create a text file "numbers.txt" and add some numbers (one per line).
 
-    # Wechseln zurück zum Home-Verzeichnis.
-    `cd ~`
+# Filter the file "numbers.txt" for lines that are greater than 50.
 
-    # Erstellen mehrere Textdateien mit unterschiedlichen Namen und dem Text-Inhalt "wichtig"  mitfilfe einer for-Schleife
-    `for i in `seq 1 10`; do echo "wichtig" > "datei_$i.txt"; done`
+# Sort the filtered numbers in ascending order.
 
-    # Suchen nach allen Dateien im Lösungs-Verzeichnis, die das Wort "wichtig" enthalten.
-    `grep -rl "wichtig" ~/`
+# Calculate the sum of all numbers in the sorted list.
 
-    # Lösche alle gefundenen Dateien.
-    `grep -rl "wichtig" ~/`
+## Task 5: Environment Variables and Command Parameters
 
-##### Aufgabe 4: Pipelines und Befehlskombinationen
+# Create an environment variable named "MY_NAME" and set it to your name.
 
-    # Erstelle eine Textdatei "zahlen.txt" und fügen Sie einige Zahlen (eine pro Zeile) ein.
-    `for _ in $(seq 1 100); do echo $((RANDOM % 100 + 1)) >> "zahlen.txt"; done`
+# Write a shell script named "greeting.sh" that outputs "Hello, <YOUR NAME>!",
 
-    # Filter die Datei "zahlen.txt" nach Zeilen, die größer als 50 sind.
-    `awk '$1 <= 50' zahlen.txt > gefilterte_zahlen.txt`
+# where <YOUR NAME> is replaced by the value of the set environment variable.
 
-    # Sortiere die gefilterten Zahlen in aufsteigender Reihenfolge.
-    `sort -n gefilterte_zahlen.txt > sortierte_zahlen.txt`
+# Give the script the ability to accept a greeting text
 
-    # Berechne die Summe aller Zahlen in der sortierten Liste.
-    `awk '{ sum += $1 } END { print sum }' sortierte_zahlen.txt`
+# as a parameter, and adjust the output accordingly. - also document your input.
 
-##### Aufgabe 5: Umgebungsvariablen und Befehlsparameter
+## Task 6: Advanced Scripts (please save each as a separate file and place in a separate folder)
 
-    # Erstelle eine Umgebungsvariable namens "MEIN_NAME" und setzen Sie sie auf Ihren Namen.
-    `export MEIN_NAME="Marc"`
+# Backup Script: Create a script that automatically creates backups of
 
-    # Schreibe ein Shell-Skript mit dem Namen "begruessung.sh",
-    # das "Hallo, <DEIN Name>!" ausgibt, wobei <DEIN NAME> durch den Wert
-    # der gesetzten Umgebungsvariable ersetzt wird.
-    `touch begruessung.sh`
-    `
-        #!/bin/bash
-        echo "Halli $MEIN_NAME"
-    `
+# certain files or directories. You could use a
 
-    # Gebe dem Skript die Möglichkeit, einen Begrüßungstext
-    # als Parameter zu akzeptieren, und passen Sie die Ausgabe entsprechend an. - dokumentiere auch deine Eingabe
-    `
-        #!/bin/bash
-        BEGRUESSUNGSTEXT=${1:-"Hallo"}
-        echo "$BEGRUESSUNGSTEXT $MEIN_NAME"
-    `
+# timestamp or version number convention to name the
 
-##### Aufgabe 6: fortgeschrittene Skripte (bitte jeweils als eigene Datei speichern und in separatem Ordner ablegen)
+# backup files.
 
-    # Backup-Skript: Erstelle ein Skript, das automatisch Backups von
-    # bestimmten Dateien oder Verzeichnissen erstellt. Du könntest eine
-    # Zeitstempel- oder Versionsnummerkonvention verwenden, um die
-    # Backup-Dateien zu benennen.
+# Word Counter: Write a script that counts and outputs the number of words in a
 
-    # Wortzähler: Schreibe ein Skript, das die Anzahl der Wörter in einer
-    # gegebenen Datei zählt und ausgibt.
+# given file.
 
-    # Suche und Ersetze: Entwickle ein Skript, das eine bestimmte
-    # Zeichenkette in einer Datei sucht und durch eine andere Zeichenkette
-    # ersetzt.
+# Search and Replace: Develop a script that searches for a specific
 
-    # Automatisierte Dateiverarbeitung: Schreibe ein Skript, das automatisch
-    # Bilder in einem Verzeichnis verkleinert, um deren Dateigröße zu
-    # reduzieren.
+# string in a file and replaces it with another string.
 
-    # Passwortgenerator: Erstelle ein Skript, das zufällige Passwörter
-    # generiert. Du könntest Parameter verwenden, um die Länge und die
-    # Verwendung von Sonderzeichen anzupassen.
+# Automated File Processing: Write a script that automatically
 
-    # Textbasiertes Spiel: Kreiere ein einfaches textbasiertes Spiel,
-    # bei dem der Spieler Entscheidungen treffen kann, die den Verlauf
-    # der Geschichte beeinflussen - nutze dazu lediglich Variablen, echo, read, case, if & else Befehle und Abfragen
-    # Tipp: Entscheidungen/Wahrscheinlichkeiten können über eine modulo (%) Funktion abgefragt werden
+# reduces images in a directory to reduce their file size.
 
-    # Systemüberwachung: Entwickle ein Skript, das wichtige
-    # Systeminformationen wie CPU-Auslastung, Speicherbelegung und
-    # angeschlossene Hardware anzeigt. - halte es einfach und so kurz wie möglich
+# Password Generator: Create a script that generates random passwords.
+
+# You could use parameters to adjust the length and the
+
+# use of special characters.
+
+# Text-based Game: Create a simple text-based game
+
+# where the player can make decisions that influence the course
+
+# of the story - use only variables, echo, read, case, if & else commands and queries
+
+# Tip: Decisions/probabilities can be queried via a modulo (%) function
+
+# System Monitoring: Develop a script that displays important
+
+# system information such as CPU usage, memory usage, and
+
+# connected hardware.

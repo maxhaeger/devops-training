@@ -1,4 +1,0 @@
-- include: nginx.yaml
-- include: install_php.yaml
-- include: copy.yaml
-- include: activate_php.yaml
