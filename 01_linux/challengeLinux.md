@@ -18,6 +18,16 @@ Solve the tasks below and document your solution paths in the form of comments w
 
 # Display the contents of the file "notes.txt".
 
+### SOLUTION
+# cd
+# mkdir CLI-Exercise
+# cd CLI-Exercise
+# touch notes.txt
+# ls
+# echo "First Note" >> notes.txt
+# cat notes.txt
+
+
 ## Task 2: File and Directory Renaming
 
 # Rename the file "notes.txt" to "my_notes.txt".
@@ -25,6 +35,12 @@ Solve the tasks below and document your solution paths in the form of comments w
 # Create a new directory named "Backup".
 
 # Move the file "my_notes.txt" to the "Backup" directory.
+
+### SOLUTION
+#!/bin/bash
+# mkdir Backup
+# mv notes.txt Backup/my_notes.txt
+
 
 ## Task 3: File Search and Filtering
 
@@ -35,6 +51,16 @@ Solve the tasks below and document your solution paths in the form of comments w
 # Search for all files in the solution directory that contain the word "important".
 
 # Delete all found files.
+
+### SOLUTION
+#!/bin/bash
+# cd
+# for i in {0..4}
+# do
+#	echo "important" > file_$i.txt
+# done
+# grep -Rl "important" --exclude-dir="*" | xargs rm
+
 
 ## Task 4: Pipelines and Command Combinations
 
