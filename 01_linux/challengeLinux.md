@@ -72,6 +72,35 @@ Solve the tasks below and document your solution paths in the form of comments w
 
 # Calculate the sum of all numbers in the sorted list.
 
+### SOLUTION
+#!/bin/bash
+# Variables
+# greater_fifty=()
+# sum=0
+# for i in {0..99}
+# do
+#	echo $((1 + $RANDOM % 100)) >> numbers.txt
+# done
+#
+# while read line
+# do
+#	if ((line > 50))
+#	then
+#		greater_fifty+=("$line")
+#	fi
+# done < numbers.txt
+#
+# IFS=$'\n' sorted=($(sort -n <<<"${greater_fifty[*]}"))
+# unset IFS
+#
+# for num in "${sorted[@]}"
+# do
+#	((sum +=num))
+# done
+#
+# echo $sum
+
+
 ## Task 5: Environment Variables and Command Parameters
 
 # Create an environment variable named "MY_NAME" and set it to your name.
