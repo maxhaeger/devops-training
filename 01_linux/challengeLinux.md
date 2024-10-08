@@ -113,6 +113,7 @@ Solve the tasks below and document your solution paths in the form of comments w
 
 # as a parameter, and adjust the output accordingly. - also document your input.
 
+
 ## Task 6: Advanced Scripts (please save each as a separate file and place in a separate script folder)
 
 # Backup Script: Create a script that automatically creates backups of
