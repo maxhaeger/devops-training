@@ -114,6 +114,8 @@ Solve the tasks below and document your solution paths in the form of comments w
 # as a parameter, and adjust the output accordingly. - also document your input.
 
 
+
+
 ## Task 6: Advanced Scripts (please save each as a separate file and place in a separate script folder)
 
 # Backup Script: Create a script that automatically creates backups of
@@ -124,23 +126,28 @@ Solve the tasks below and document your solution paths in the form of comments w
 
 # backup files.
 
+
 # Word Counter: Write a script that counts and outputs the number of words in a
 
 # given file.
+
 
 # Search and Replace: Develop a script that searches for a specific
 
 # string in a file and replaces it with another string.
 
+
 # Automated File Processing: Write a script that automatically
 
 # reduces images in a directory to reduce their file size.
+
 
 # Password Generator: Create a script that generates random passwords.
 
 # You could use parameters to adjust the length and the
 
 # use of special characters.
+
 
 # Text-based Game: Create a simple text-based game
 
@@ -149,6 +156,7 @@ Solve the tasks below and document your solution paths in the form of comments w
 # of the story - use only variables, echo, read, case, if & else commands and queries
 
 # Tip: Decisions/probabilities can be queried via a modulo (%) function
+
 
 # System Monitoring: Develop a script that displays important
 
