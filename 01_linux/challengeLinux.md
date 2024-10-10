@@ -127,9 +127,11 @@ Solve the tasks below and document your solution paths in the form of comments w
 # backup files.
 
 
+
 # Word Counter: Write a script that counts and outputs the number of words in a
 
 # given file.
+DONE
 
 
 # Search and Replace: Develop a script that searches for a specific
@@ -137,9 +139,11 @@ Solve the tasks below and document your solution paths in the form of comments w
 # string in a file and replaces it with another string.
 
 
+
 # Automated File Processing: Write a script that automatically
 
 # reduces images in a directory to reduce their file size.
+
 
 
 # Password Generator: Create a script that generates random passwords.
@@ -149,6 +153,7 @@ Solve the tasks below and document your solution paths in the form of comments w
 # use of special characters.
 
 
+
 # Text-based Game: Create a simple text-based game
 
 # where the player can make decisions that influence the course
@@ -156,6 +161,7 @@ Solve the tasks below and document your solution paths in the form of comments w
 # of the story - use only variables, echo, read, case, if & else commands and queries
 
 # Tip: Decisions/probabilities can be queried via a modulo (%) function
+
 
 
 # System Monitoring: Develop a script that displays important
