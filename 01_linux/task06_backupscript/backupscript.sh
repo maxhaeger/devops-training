@@ -1,0 +1,7 @@
+#!/bin/bash
+
+BACKUP_DIR="backup"
+TIMESTAMP=$(basename "$1")
+BACKUP_FILENAME="${FILENAME%.*}_$TIMESTAMP.${FILENAME##*.}"
+
+cp "$1" "$BACKUP_DIR/$BACKUP_FILENAME"
