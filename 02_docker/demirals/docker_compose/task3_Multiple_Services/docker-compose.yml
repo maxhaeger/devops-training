@@ -1,0 +1,16 @@
+services:
+  s_nginx:
+    container_name: Task3_nginx
+    image: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
+    ports:
+      - 8080:80
+
+
+  alpine_service:
+    image: alpine
+    container_name: Task3_alpine_container
+    volumes:
+      - ./:/data
+    command: sh -c "echo 'Hello from Alpine!' > /data/hello.txt && tail -f /dev/null" 'Hello from Alpine!' > /data/hello.txt && tail -f /dev/null"

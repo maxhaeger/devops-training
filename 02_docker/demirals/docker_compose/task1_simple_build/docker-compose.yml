@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+  s_nginx:
+    container_name: Task1_nginx
+    image: nginx
+    ports:
+      - 8080:80
+
+
+  s_html:
+    container_name: Task1_html
+    image: httpd
+    volumes:
+      - ./index.html:/usr/local/apache2/htdocs/index.html
+    ports:
+      - 9090:80
+
+volumes:
+  html:
+
