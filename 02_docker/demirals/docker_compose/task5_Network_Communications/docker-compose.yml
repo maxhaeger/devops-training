@@ -1,0 +1,27 @@
+services:
+  s_nginx:
+    container_name: Task5_nginx
+    image: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
+    environment:
+      - SERVER_NAME=demirals
+    ports:
+      - 8080:80
+    networks:
+      - my-network
+
+
+  alpine_service:
+    image: alpine
+    container_name: Task5_alpine_container
+    volumes:
+      - ./:/data
+    command: sh -c "echo 'Hello from Alpine!' > /data/hello.txt && tail -f /dev/null" 'Hello from Alpine!' > /data/hello.txt && tail -f /dev/null"
+    networks:
+      - my-network
+
+
+networks:
+  my-network:
+    driver: bridge
