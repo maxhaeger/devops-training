@@ -1,0 +1,8 @@
+version: '3.1'
+
+services:
+  s_nginx:
+    container_name: Task6_nginx
+    build: .
+    ports:
+      - 9090:80  # Host'un 9090 portunu, konteynerin 80 portuna yönlendiriyoruz
