@@ -1,0 +1,25 @@
+
+services:
+  s_nginx:
+    container_name: task5_nginx
+    image: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
+    environment:
+      - SERVER_NAME=cgunayler
+    ports:
+      - 8080:80
+    networks:
+      - my-network
+
+  alpine_service:
+    image: alpine
+    container_name: task5_alpine
+    volumes:
+      - ./:/data
+    command: sh -c "echo 'Hello from Alpine!' > /data/hello.txt && tail -f /dev/null"
+    networks:
+      - my-network
+
+networks:
+  my-network:

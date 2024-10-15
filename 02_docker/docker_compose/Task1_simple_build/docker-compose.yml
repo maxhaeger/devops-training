@@ -1,14 +1,14 @@
 
 services:
   s_nginx:
-    container_name: cem_nginx
+    container_name: task1_nginx
     image: nginx
     ports:
       - 8080:80
       - 8081:80
 
   s_html:
-    container_name: ce_html
+    container_name: task1_ce_html
     image: httpd
     ports:
       - 9090:80

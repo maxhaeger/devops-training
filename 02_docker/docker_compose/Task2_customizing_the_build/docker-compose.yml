@@ -2,7 +2,7 @@
 
 services:
   s_nginx:
-    container_name: Task2_nginx
+    container_name: task2_nginx
     image: nginx
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
