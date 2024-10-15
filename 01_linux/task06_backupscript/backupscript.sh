@@ -15,4 +15,4 @@ if [ ! -d "$BACKUP_DIR" ]; then
 	mkdir "$BACKUP_DIR"
 fi
 
-tar -cf "$BACKUP_DIR/$BACKUP_FILENAME" "$1"
+tar -cfz "$BACKUP_DIR/$BACKUP_FILENAME" "$1"
