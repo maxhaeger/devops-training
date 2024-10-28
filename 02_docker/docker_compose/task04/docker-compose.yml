@@ -1,0 +1,20 @@
+services:
+    web:
+        image: nginx:latest
+        container_name: simple_website
+        environment:
+            - SERVER_NAME=nginxContainerServer
+        ports:
+            - "80:80"
+        volumes:
+            - /home/benediktsteinbacher/devops-training/02_docker/docker_compose/task02/index.html:/usr/share/nginx/html/index.html
+            - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
+        restart: always
+    
+    data-service:
+        image: alpine:latest
+        container_name: data_service
+        command: tail -f /dev/null
+        volumes:         
+            - ./:/data
+        restart: always
