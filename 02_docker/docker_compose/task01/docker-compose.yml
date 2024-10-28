@@ -1,0 +1,9 @@
+services:
+    web:
+        image: nginx:latest
+        container_name: simple_website
+        ports:
+            - "80:80"
+        volumes:
+            - /home/benediktsteinbacher/devops-training/02_docker/docker_compose/task01/index.html:/usr/share/nginx/html/index.html
+        restart: always
