@@ -32,57 +32,51 @@ HTML site.
 # Task 5: Multi-VM Environments #
 #################################
 
-Set up two VMs in the same Environment. 
+Set up two VMs in the same Environment. Enable private networking between the two VMs.
 
 #####################################
-# Task 6: Using different Providers #
+# Task 6: DHCP Server Setup         #
 #####################################
 
-Enable private networking between the two VMs. 
-
-#####################################
-# Task 7: Host-Only Network Adapter #
-#####################################
-
-Configure a host-only network adapter for both VMs, so that both VMs can be 
-reached from the host machine.
+Configure a DHCP server in your Vagrant environment that serves IP addresses 
+dynamically. 
 
 ##############################################
-# Task 8: Multi-VM provisioning dependencies #
+# Task 7: Multi-VM provisioning dependencies #
 ##############################################
 
 Set up interdependent provisioning between multiple VMs, so that one VMs 
 provisioning depends on the provisioning of the other and uses data from it. 
 
 ############################################
-# Task 9: Custom Nginx Reverse proxy setup #
+# Task 8: Custom Nginx Reverse proxy setup #
 ############################################
 
 Configure two VMs, configure one to serve Nginx and one to serve Nginx as 
 reverse proxy for the other.
 
-########################################
-# Task 10: Vagrant Triggers and Events #
-########################################
+#######################################
+# Task 9: Vagrant Triggers and Events #
+#######################################
 
 Set up a Vagrant trigger to run a script that checks for required Plugins or 
 dependencies before the VMs are provisioned. 
 
 ##################################
-# Task 11: Resource Optimization #
+# Task 10: Resource Optimization #
 ##################################
 
 Set up CPU and RAM limits for your VMs, make sure it is still running smoothly.
 
 #########################
-# Task 12: Full-fledged #
+# Task 11: Full-fledged #
 #########################
 
 Enable your VMs to appear as full-fledged devices on your physical network with
 bridged networking. 
 
 #######################################################
-# Task 13: Development Environment for multiple Users #
+# Task 12: Development Environment for multiple Users #
 #######################################################
 
 Create a Vagrant environment that provisions an individual development VM per user.
