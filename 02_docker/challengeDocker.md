@@ -80,8 +80,8 @@ conventional build, copy the result here:
 
 | Image                |      Size |
 | :------------------- | --------: |
-| optimized-go-build   |   9.17 MB |
-| unoptimized-go-build | 248.73 MB |
+| optimized-go-build   |  53.00 MB |
+| unoptimized-go-build |   1.02 GB |
 
 ### 6. Simple Website with Nginx:
 

@@ -1,0 +1,41 @@
+Vagrant.configure("2") do |config|
+  # Variables
+  pn = "private_network"
+
+  # SSH config
+  config.ssh.forward_agent = true
+  config.ssh.insert_key = false # DO NOT REMOVE, important for the copied keys to work
+  
+  # Jump Host
+  config.vm.define "jh" do |jh|
+    jh.vm.box = "ubuntu/jammy64"
+    jh.vm.hostname = "jumphost"
+    jh.vm.network pn, ip: "192.168.60.1"
+    jh.vm.network "forwarded_port", guest: 22, host: 2222, id: "ssh"
+
+    # Insecure key for ssh connection from jump host to hosts
+    jh.vm.provision "file", source: Vagrant.source_root.join("keys/vagrant"), destination: "/home/vagrant/.ssh/id_rsa"
+    jh.vm.provision "shell", inline: <<-SHELL
+      sudo apt-get update && sudo apt-get upgrade -y
+      sudo apt install -y software-properties-common
+      sudo add-apt-repository --yes --update ppa:ansible/ansible
+      sudo apt install -y ansible
+      chown vagrant:vagrant /home/vagrant/.ssh/id_rsa
+      chmod 600 /home/vagrant/.ssh/id_rsa
+    SHELL
+  end
+
+  # Target Host 1
+  config.vm.define "th1" do |th1|
+    th1.vm.box = "ubuntu/jammy64"
+    th1.vm.hostname = "host1"
+    th1.vm.network pn, ip: "192.168.60.10"
+  end
+
+  # Target Host 2
+  config.vm.define "th2" do |th2|
+    th2.vm.box = "ubuntu/jammy64"
+    th2.vm.hostname = "host2"
+    th2.vm.network pn, ip: "192.168.60.11"
+  end
+end

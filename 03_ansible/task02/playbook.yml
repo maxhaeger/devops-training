@@ -1,0 +1,31 @@
+---
+- name: First Playbook
+  hosts: groups
+  become: yes
+
+  tasks:
+  - name: Collect System Information
+    ansible.builtin.setup:
+    register: system_info
+
+  - name: Show System Information
+    ansible.builtin.debug:
+      var: system_info
+
+  - name: System updates
+    ansible.builtin.apt:
+      update_cache: yes
+    register: update_result
+
+  - name: Show System updates
+    ansible.builtin.debug:
+      var: update_result
+
+  - name: Collect Packet Information
+    ansible.builtin.package_facts:
+
+  - name: btop installation
+    ansible.builtin.apt:
+      name: btop
+      state: present
+    when: "'btop' not in ansible_facts.packages"

@@ -1,0 +1,9 @@
+[group1]
+192.168.60.10
+
+[group2]
+192.168.60.11
+
+[groups:children]
+group1
+group2
