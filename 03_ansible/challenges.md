@@ -1,7 +1,7 @@
 ## Aufgabe 1: Infrastruktur aufsetzen
 
 1. Erstelle ein Vagrantfile mit:
-   - 1 Jump Host (Ubuntu)
+   - 1 Jump Host (Ubuntu) von hier aus startest du Ansible
    - 2 Target Hosts (Ubuntu)
    - Privates Netzwerk
 2. Starte die VMs
