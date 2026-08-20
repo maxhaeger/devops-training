@@ -1,0 +1,26 @@
+### Task 5: Network Communication
+
+###Add a network definition to your Docker Compose setup from Task 4. Name the network
+###"my-network". Update the service definitions to join this network.
+
+
+name: network-task
+
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./index.html:/usr/share/nginx/html/index.html:ro
+      - type: bind
+        source: ./'Task 5'
+        target: /opt/app/task-5
+    environment:
+      - SERVER_NAME=thor
+    networks:
+      - "my-network"
+networks:
+  my-network:
+    driver: bridge

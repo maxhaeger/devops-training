@@ -1,0 +1,14 @@
+### Task 2: Customizing the Build
+
+#Take the Docker image version from Task 1 and modify the YAML file to copy a custom
+#configuration file nginx.conf from your current directory into the container. The configuration file should be located in the container path /etc/nginx/conf.d/.
+name: website
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./index.html:/usr/share/nginx/html/index.html:ro

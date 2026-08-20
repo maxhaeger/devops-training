@@ -1,0 +1,18 @@
+#Update the YAML file from Task 3 to add environment variables for the "nginx" service.
+#Define an environment variable named "SERVER_NAME" with any value of your choice.
+
+name: data-service
+
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./index.html:/usr/share/nginx/html/index.html:ro
+      - type: bind
+        source: ./'Task 3'
+        target: /opt/app/task-3
+    environment:
+      - SERVER_NAME=thor

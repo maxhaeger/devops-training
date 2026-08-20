@@ -1,0 +1,19 @@
+### Task 3: Multiple Services
+
+#Extend the YAML file from Task 2 to add a second service. Use the "alpine"
+#Docker image and name the service "data-service". This service should mount the current directory
+#as a volume in the container.
+
+name: data-service
+
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./index.html:/usr/share/nginx/html/index.html:ro
+      - type: bind
+        source: ./'Task 3'
+        target: /opt/app/task-3
