@@ -1,0 +1,10 @@
+### 8. Using Docker Compose:
+
+#Create a simple Docker Compose file to start your Multi-Stage
+#application and its dependencies.services:
+
+services:
+  hello:
+    build: .
+    ports:
+      - "8080:3000"
