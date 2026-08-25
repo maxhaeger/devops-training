@@ -9,6 +9,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "jump" do |jump|
     jump.vm.hostname = "jump"
     jump.vm.network "private_network", ip: "10.10.10.101", netmask: "255.255.255.0"
+    jump.vm.provision "shell", name: "install-dependencies", path: "install-dependencies.sh"
   end  
 
   config.vm.define "target-1" do |target_1|
