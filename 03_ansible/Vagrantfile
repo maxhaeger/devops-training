@@ -1,0 +1,24 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "bento/ubuntu-24.04"
+ # config.vm.synced_folder ".", "/vagrant", disabled: true
+  config.vm.synced_folder ".", "/vagrant", 
+    type: "nfs", 
+    nfs_version: 4, 
+    nfs_udp: false
+
+  config.vm.define "jump" do |jump|
+    jump.vm.hostname = "jump"
+    jump.vm.network "private_network", ip: "10.10.10.101", netmask: "255.255.255.0"
+  end  
+
+  config.vm.define "target-1" do |target_1|
+    target_1.vm.hostname = "target-1"
+    target_1.vm.network "private_network", ip: "10.10.10.102", netmask: "255.255.255.0"
+  end
+
+  config.vm.define "target-2" do |target_2|
+    target_2.vm.hostname = "target-2"
+    target_2.vm.network "private_network", ip: "10.10.10.103", netmask: "255.255.255.0"
+  end
+end
+
