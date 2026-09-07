@@ -1,0 +1,8 @@
+target:
+  hosts:
+    moreira:
+      ansible_host: 10.10.10.102
+      ansible_user: vagrant
+    diara:
+      ansible_host: 10.10.10.103
+      ansible_user: vagrant
