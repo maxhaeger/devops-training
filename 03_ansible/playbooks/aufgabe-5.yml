@@ -1,0 +1,15 @@
+- name: Aufgabe 5
+  become: true
+  hosts: all
+  tasks:
+    - name: Collecting system information using setup
+      ansible.builtin.setup:
+      register: system_facts
+    
+    - name: Printing system system_facts
+      ansible.builtin.debug:
+        var: system_facts
+    - name: Print only if the system is Ubuntu
+      ansible.builtin.debug:
+        msg: "Hey, I am U-B-U-N-T-U!"
+      when: (ansible_facts['distribution'] == "Ubuntu")
