@@ -9,10 +9,12 @@
       ansible.builtin.package:
         name: "*"
         state: latest
+
     - name: Installing htop
       ansible.builtin.package:
         name: htop
         state: present
+        
     - name: Setting a hostname
       ansible.builtin.hostname:
         name: "{{ inventory_hostname }}"

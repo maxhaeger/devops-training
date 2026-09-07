@@ -1,8 +1,15 @@
 target:
-  hosts:
-    moreira:
-      ansible_host: 10.10.10.102
-      ansible_user: vagrant
-    diara:
-      ansible_host: 10.10.10.103
-      ansible_user: vagrant
+  group-1:
+    hosts:
+      task-1:
+        ansible_host: 10.10.10.102
+        ansible_user: vagrant
+    vars:
+      test_variable_1: test-1
+  group-2:
+    hosts:    
+      task-2:
+        ansible_host: 10.10.10.103
+        ansible_user: vagrant
+    vars:
+      test_variable_2: test-2
